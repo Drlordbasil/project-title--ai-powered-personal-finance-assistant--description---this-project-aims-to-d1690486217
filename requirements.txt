@@ -1,0 +1,5 @@
+The package requirements for the given Python program are as follows:
+
+- No external packages are required for the provided code. The program uses only built-in Python modules and does not rely on any third-party packages.
+
+Thus, there are no specific package requirements for this Python program.
