@@ -56,7 +56,8 @@ class PersonalFinanceAssistant:
                 print(f"Congratulations! You have achieved your {goal} goal.")
             else:
                 remaining = amount - self.balance
-                print(f"You need {remaining} more to achieve your {goal} goal.")
+                print(
+                    f"You need {remaining} more to achieve your {goal} goal.")
 
     def send_reminder(self, message):
         # Send personalized reminders to users for bill payments, investment opportunities, etc.
@@ -65,6 +66,7 @@ class PersonalFinanceAssistant:
     def ensure_security_and_privacy(self):
         # Implement security and privacy measures for users' financial data
         pass
+
 
 # Usage example:
 assistant = PersonalFinanceAssistant()
