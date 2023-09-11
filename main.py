@@ -1,7 +1,7 @@
 class PersonalFinanceAssistant:
     def __init__(self):
         self.income = 0.0
-        self.expenses = []
+        self.expenses = {}
         self.balance = 0.0
         self.budget = {}
         self.goals = {}
@@ -12,12 +12,11 @@ class PersonalFinanceAssistant:
         self.balance += self.income
 
     def add_expense(self, category, amount):
-        expense = {
-            'category': category,
-            'amount': float(amount)
-        }
-        self.expenses.append(expense)
-        self.balance -= expense['amount']
+        if category in self.expenses:
+            self.expenses[category] += float(amount)
+        else:
+            self.expenses[category] = float(amount)
+        self.balance -= float(amount)
 
     def set_budget(self, category, amount):
         self.budget[category] = float(amount)
